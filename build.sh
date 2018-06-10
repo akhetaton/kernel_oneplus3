@@ -63,6 +63,10 @@ function make_kernel {
         make O=${KBUILD_OUTPUT} $THREAD
 }
 
+function make_changelog {
+        ./changelog.sh
+}
+
 function make_zip {
         cp -vr $ZIMAGE_DIR/$KERNEL $REPACK_DIR/zImage
         cd $REPACK_DIR
@@ -98,6 +102,16 @@ echo -e "${restore}"
 make_kernel
 echo -e "${green}"
 echo "All compiled now."
+echo -e "${restore}"
+
+echo
+
+echo -e "${red}"
+echo "Logging..."
+echo -e "${restore}"
+make_changelog
+echo -e "${green}"
+echo "All logged now."
 echo -e "${restore}"
 
 echo
