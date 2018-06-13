@@ -1,15 +1,50 @@
 ====================
      2018-06-13    
 ====================
+21ea7a7  build: R.4  [crian]
+9b46a10  defconfig: enable KCAL  [crian]
+f9d253f  msm: mdss: KCAL: disable igc update  [flar2]
+0156cff  msm: mdss: KCAL: Send a pp display commit when changes are made  [savoca]
+01c5453  mdss mdp: kcal for mdss_mdp_v1_7  [tbalden]
+06f3bff  Merge branch 'oneplus/QC8996_O_8.0.0_Beta' of https://github.com/android-linux-stable/op3 into oos-8.0-b  [crian]
+bc289ec  Merge 3.18.113 into oneplus/QC8996_O_8.0.0_Beta  [Nathan Chancellor]
+3176776  Linux 3.18.113  [Greg Kroah-Hartman]
+bc4225d  rtnetlink: validate attributes in do_setlink()  [Eric Dumazet]
+e384b14  team: use netdev_features_t instead of u32  [Dan Carpenter]
+dcd71a2  net/mlx4: Fix irq-unsafe spinlock usage  [Jack Morgenstein]
+7f56a98  net: usb: cdc_mbim: add flag FLAG_SEND_ZLP  [Daniele Palmas]
+6c2d8d7  net/packet: refine check for priv area size  [Eric Dumazet]
+c9912b7  isdn: eicon: fix a missing-check bug  [Wenwen Wang]
+8c79f73  ip6mr: only set ip6mr_table from setsockopt when ip6mr_new_table succeeds  [Sabrina Dubroca]
+843e5ed  enic: set DMA mask to 47 bit  [Govindarajulu Varadarajan]
+19775c9  dccp: don't free ccid2_hc_tx_sock struct in dccp_disconnect()  [Alexey Kodanev]
+fde5217c  bnx2x: use the right constant  [Julia Lawall]
+1a16822  drm: set FMODE_UNSIGNED_OFFSET for drm files  [Dave Airlie]
+3bbdc2a  mmap: relax file size limit for regular files  [Linus Torvalds]
+bf3ff10  mmap: introduce sane default mmap limits  [Linus Torvalds]
+6d64aec  mm: fix the NULL mapping case in __isolate_lru_page()  [Hugh Dickins]
+43e631b  fix io_destroy()/aio_complete() race  [Al Viro]
+d4dd8e5  drm/i915: Disable LVDS on Radiant P845  [Ondrej Zary]
+38de6ff  MIPS: ptrace: Fix PTRACE_PEEKUSR requests for 64-bit FGRs  [Maciej W. Rozycki]
+c783057  tcp: avoid integer overflows in tcp_rcv_space_adjust()  [Eric Dumazet]
+4ff12f8  cfg80211: further limit wiphy names to 64 bytes  [Eric Biggers]
+b1ebe5e  selinux: KASAN: slab-out-of-bounds in xattr_getsecurity  [Sachin Grover]
+7ca1225  tracing: Fix crash when freeing instances with event triggers  [Steven Rostedt (VMware)]
+1e056c3  build: adjustments  [crian]
+f1eeafd  changelog: update  [crian]
 7e01428  build: R.3  [crian]
 
 ====================
      2018-06-12    
 ====================
-7c03316  Revert "mdss_fb: new backlight dimmer formula"  [crian]
 
 ====================
      2018-06-11    
+====================
+7c03316  Revert "mdss_fb: new backlight dimmer formula"  [crian]
+
+====================
+     2018-06-10    
 ====================
 1a92483  changelog: update  [crian]
 3f39251  build: R.2  [crian]
@@ -38,13 +73,13 @@ a316a71  mdss_fb: introduce new backlight dimmer formula  [brigio345]
 d871f1d  build: add changelog script  [crian]
 
 ====================
-     2018-06-10    
+     2018-06-09    
 ====================
 4ce2c78  build: add script  [crian]
 178b7c3  defconfig: introduce bane  [crian]
 
 ====================
-     2018-06-09    
+     2018-06-08    
 ====================
 80ed27b  msm: kgsl: Report correct GPU frequency in sysfs  [myfluxi]
 42d5689  kgsl: Shut up about not being able to create debugfs  [Nathan Chancellor]
@@ -80,7 +115,7 @@ dba878a  msm: thermal: Add sysfs nodes to control parameters  [Pranav Vashi]
 5f76e97  msm: thermal: Check temperature only if probed  [myfluxi]
 
 ====================
-     2018-06-08    
+     2018-06-07    
 ====================
 d96a47c  Makefile: optimize  [crian]
 5ce4853  cpufreq: interactive: add screen off max frequency tunable  [imoseyon]
@@ -102,10 +137,6 @@ fb2ea22  cpu-boost: Rework scheduling setup  [Alex Naidis]
 5f1d64e  drivers: cpu-boost: optimize policy update loop on input cpufreq boost  [Francisco Franco]
 00484d3  cpufreq: cpu-boost: set interval between consecutive boosts to be at least the duration of the boost instead of a bigger value  [Francisco Franco]
 d7ff0fa  display: add a simple api to query the display state (on/off) at any point in time  [Francisco Franco]
-
-====================
-     2018-06-07    
-====================
 
 ====================
      2018-06-06    
@@ -140,6 +171,10 @@ e86ea0b  cfq-iosched: fix the setting of IOPS mode on SSDs  [Jens Axboe]
 bfa8af9  misc: fpc1020: Fix s1302_is_keypad_stopped() logic for home key  [Sultanxda]
 c8f677a  misc: fpc1020: Ignore home key presses when touchscreen is in use  [Sultanxda]
 3f32480  input: synaptics: s1302: Stop keypad when touchscreen is in use  [Sultanxda]
+
+====================
+     2018-06-05    
+====================
 e3a59cd  input: synaptics: s3320: fix gestures  [crian]
 dab26f2  drivers/oneplus/coretech/opchain/opchain_proxy.c: add missing Module License  [crian]
 0afca1e  module.c: allow stock modules to load  [crian]
@@ -147,10 +182,6 @@ dab26f2  drivers/oneplus/coretech/opchain/opchain_proxy.c: add missing Module Li
 eb72b98  proc: Remove verifiedbootstate flag from /proc/cmdline  [Sultanxda]
 a3fdf98  arm64: dts: disable verify and tweak options  [engstk]
 8bd03cc  .gitignore: add out  [crian]
-
-====================
-     2018-06-05    
-====================
 
 ====================
      2018-06-04    
@@ -171,8 +202,4 @@ a3fdf98  arm64: dts: disable verify and tweak options  [engstk]
 ====================
      2018-05-31    
 ====================
-87c0cb8  Merge 3.18.112 into oneplus/QC8996_O_8.0.0_Beta  [Nathan Chancellor]
-b0b357c  Linux 3.18.112  [Greg Kroah-Hartman]
-f451da6  Revert "vti4: Don't override MTU passed on link creation via IFLA_MTU"  [Greg Kroah-Hartman]
-705a6b19  Merge 3.18.111 into oneplus/QC8996_O_8.0.0_Beta  [Nathan Chancellor]
 
