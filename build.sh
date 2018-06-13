@@ -19,7 +19,7 @@ DEFCONFIG="bane_defconfig"
 
 # Kernel Details
 BASE_VER="Bane"
-VER="R.2"
+VER="R.3"
 VARIANT="$BASE_VER-$VER"
 
 # Vars
@@ -28,7 +28,7 @@ export CROSS_COMPILE=/media/christian/Volume/toolchain/aarch64-linux-ubertc-4.9/
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=crian
-export KBUILD_BUILD_HOST=korriban
+export KBUILD_BUILD_HOST=kernel
 
 # Paths
 KERNEL_DIR=`pwd`
