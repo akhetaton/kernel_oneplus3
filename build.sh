@@ -18,7 +18,7 @@ KERNEL="Image.gz-dtb"
 DEFCONFIG="bane_defconfig"
 
 # Kernel Details
-BASE_VER="Bane"
+BASE_VER="BaneKernel"
 VER="R.3"
 VARIANT="$BASE_VER-$VER"
 
@@ -28,13 +28,13 @@ export CROSS_COMPILE=/media/christian/Volume/toolchain/aarch64-linux-ubertc-4.9/
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=crian
-export KBUILD_BUILD_HOST=kernel
+export KBUILD_BUILD_HOST=venom
 
 # Paths
 KERNEL_DIR=`pwd`
 KBUILD_OUTPUT="${KERNEL_DIR}/out"
 REPACK_DIR="/media/christian/Volume/kernel/AnyKernel2"
-ZIP_MOVE="/media/christian/Volume/kernel/kernel-zip"
+ZIP_MOVE="/media/christian/Volume/kernel/bk-zips/release"
 ZIMAGE_DIR="$KBUILD_OUTPUT/arch/arm64/boot"
 
 # Create output directory
@@ -70,7 +70,7 @@ function make_changelog {
 function make_zip {
         cp -vr $ZIMAGE_DIR/$KERNEL $REPACK_DIR/zImage
         cd $REPACK_DIR
-        zip -r9 "$VARIANT"-OP3-Kernel.zip *
+        zip -r9 "$BASE_VER"-OP3-"$VER".zip *
         mv *.zip $ZIP_MOVE
         cd $KERNEL_DIR
 }
