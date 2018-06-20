@@ -1,12 +1,43 @@
 ====================
-     2018-06-13    
+     2018-06-20    
 ====================
+17579f7  input: synaptics: s1302: make disable buttons on touch configurable  [Christian S]
+5d07611  defconfig: regenerate  [crian]
+
+====================
+     2018-06-19    
+====================
+
+====================
+     2018-06-18    
+====================
+
+====================
+     2018-06-17    
+====================
+
+====================
+     2018-06-16    
+====================
+
+====================
+     2018-06-15    
+====================
+
+====================
+     2018-06-14    
+====================
+516bc25  changelog: update  [crian]
 21ea7a7  build: R.4  [crian]
 9b46a10  defconfig: enable KCAL  [crian]
 f9d253f  msm: mdss: KCAL: disable igc update  [flar2]
 0156cff  msm: mdss: KCAL: Send a pp display commit when changes are made  [savoca]
 01c5453  mdss mdp: kcal for mdss_mdp_v1_7  [tbalden]
 06f3bff  Merge branch 'oneplus/QC8996_O_8.0.0_Beta' of https://github.com/android-linux-stable/op3 into oos-8.0-b  [crian]
+
+====================
+     2018-06-13    
+====================
 bc289ec  Merge 3.18.113 into oneplus/QC8996_O_8.0.0_Beta  [Nathan Chancellor]
 3176776  Linux 3.18.113  [Greg Kroah-Hartman]
 bc4225d  rtnetlink: validate attributes in do_setlink()  [Eric Dumazet]
@@ -42,10 +73,6 @@ f1eeafd  changelog: update  [crian]
      2018-06-11    
 ====================
 7c03316  Revert "mdss_fb: new backlight dimmer formula"  [crian]
-
-====================
-     2018-06-10    
-====================
 1a92483  changelog: update  [crian]
 3f39251  build: R.2  [crian]
 39f27f9  defconfig: enable maple I/O scheduler  [crian]
@@ -65,6 +92,10 @@ dc7026a  block: [Introduded for 3.18.y] Add Maple I/O Scheduler  [Joe Maples]
 cbbc2ba  defconfig: enable fast charge  [crian]
 8903002  drivers: misc: implement usb fast charge mode  [engstk]
 434daef  mdss_fb: adjust backlight dimmer formula  [crian]
+
+====================
+     2018-06-10    
+====================
 a316a71  mdss_fb: introduce new backlight dimmer formula  [brigio345]
 7394938  mdss_fb: add backlight dimmer option  [flar2]
 1f44b8e  net: add wireguard  [crian]
@@ -77,10 +108,6 @@ d871f1d  build: add changelog script  [crian]
 ====================
 4ce2c78  build: add script  [crian]
 178b7c3  defconfig: introduce bane  [crian]
-
-====================
-     2018-06-08    
-====================
 80ed27b  msm: kgsl: Report correct GPU frequency in sysfs  [myfluxi]
 42d5689  kgsl: Shut up about not being able to create debugfs  [Nathan Chancellor]
 1caa71f  kgsl: Increase priority of RT thread  [Alex Naidis]
@@ -104,6 +131,11 @@ a3a08cc  asm-generic: relaxed.h: defined relaxed.h  [Sumit Singh]
 c2067db  boeffla_wl_blocker: don't block wakelocks by default  [Christian S]
 8beb20b  boeffla_wl_blocker: update to wakelock blocker driver v1.1.0  [andip71]
 74ecaa3  boeffla_wl_blocker: update to wakelock blocker driver v1.0.1  [andip71]
+66cc460  boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0  [andip71]
+
+====================
+     2018-06-08    
+====================
 66cc460  boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0  [andip71]
 e61df21  arm64: crypto: Improve target optimization flags  [Alex Naidis]
 898c531  fs: default to noatime  [arter97]
@@ -137,69 +169,4 @@ fb2ea22  cpu-boost: Rework scheduling setup  [Alex Naidis]
 5f1d64e  drivers: cpu-boost: optimize policy update loop on input cpufreq boost  [Francisco Franco]
 00484d3  cpufreq: cpu-boost: set interval between consecutive boosts to be at least the duration of the boost instead of a bigger value  [Francisco Franco]
 d7ff0fa  display: add a simple api to query the display state (on/off) at any point in time  [Francisco Franco]
-
-====================
-     2018-06-06    
-====================
-2dfafc8  adrenoboost: disable by default  [flar2]
-5977b51  adrenoboost: finetuning algorithm - scale it a bit down  [tbalden]
-d5b4bf7  msm_adreno_tz: add adrenoboost parameter  [flar2]
-04f4159  cpu-boost: Export input_boost_enable to userspace  [franciscofranco]
-4b4de90  qcom: msm-core: queue work on system_power_efficient_wq  [Francisco Franco]
-af5b2f1  drivers: power: bcl: queue work on system_power_efficient_wq  [Francisco Franco]
-aa13be8  power: bcl: queue work on system_power_efficient_wq  [Francisco Franco]
-2ac606f  drivers: thermal: queue work on system_power_efficient_wq  [Francisco Franco]
-03c1bc5  drivers: mdss: queue work on system_power_efficient_wq  [Francisco Franco]
-6eb6600  drivers: mdss: queue input handler functions to a high prio wq  [Francisco Franco]
-108c80f  kernel: workqueue: add wq_power_efficient toggle  [crian]
-1b8a02e  defconfig: enable wq_power_efficient by default  [crian]
-d877772  mmc: core: add crc toggle  [crian]
-b94d6d4  disable crc check  [flar2]
-a86e1d3  Added fsync on/off support.  [franciscofranco]
-0539d4d  cfq: fix starvation of asynchronous writes  [Glauber Costa]
-616f67e  cfq-iosched: minor cleanups  [Tejun Heo]
-389c97b  cfq-iosched: fix oom cfq_queue ref leak in cfq_set_request()  [Tejun Heo]
-d4591b7  cfq-iosched: fix async oom queue handling  [Tejun Heo]
-12c5120  cfq-iosched: simplify control flow in cfq_get_queue()  [Tejun Heo]
-e86ea0b  cfq-iosched: fix the setting of IOPS mode on SSDs  [Jens Axboe]
-1a21f35  block: Make CFQ default to IOPS mode on SSDs  [Tahsin Erdogan]
-632f6c3  tcp_output: set initial TCP window size to 64K (speed improvement)  [andip71]
-86188e0  defconfig: add TCP protocols and set westwood as default  [crian]
-7e7259c  scripts: setlocalversion: fix version  [crian]
-6852060  configs: add defconfig  [crian]
-56cd143  input: synaptics: s1302: Make s1302_is_keypad_stopped() safe  [Sultanxda]
-bfa8af9  misc: fpc1020: Fix s1302_is_keypad_stopped() logic for home key  [Sultanxda]
-c8f677a  misc: fpc1020: Ignore home key presses when touchscreen is in use  [Sultanxda]
-3f32480  input: synaptics: s1302: Stop keypad when touchscreen is in use  [Sultanxda]
-
-====================
-     2018-06-05    
-====================
-e3a59cd  input: synaptics: s3320: fix gestures  [crian]
-dab26f2  drivers/oneplus/coretech/opchain/opchain_proxy.c: add missing Module License  [crian]
-0afca1e  module.c: allow stock modules to load  [crian]
-5a96a57  proc: Remove additional SafetyNet flags from /proc/cmdline  [Sultanxda]
-eb72b98  proc: Remove verifiedbootstate flag from /proc/cmdline  [Sultanxda]
-a3fdf98  arm64: dts: disable verify and tweak options  [engstk]
-8bd03cc  .gitignore: add out  [crian]
-
-====================
-     2018-06-04    
-====================
-
-====================
-     2018-06-03    
-====================
-
-====================
-     2018-06-02    
-====================
-
-====================
-     2018-06-01    
-====================
-
-====================
-     2018-05-31    
-====================
 
