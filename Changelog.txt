@@ -1,6 +1,49 @@
 ====================
+     2018-06-22    
+====================
+4ce0e6b  treewide: fix compilation warnings  [crian]
+9978686  drivers: qcom-cpufreq: initialize ints  [crian]
+c45a234  Makefile: Fix device not booting with GCC 7.x and above  [ZaneZam]
+2c02127  soc: qcom: smp2p: fix __iomem access in SMP2P_{GET,SET}_*  [Sami Tolvanen]
+04cf01e  build: use GCC 7.3.1 toolchain  [crian]
+043e0cb  usb: otg: reduce the wakelock timeout to 1 second  [Francisco Franco]
+53e8906  oneplus: add some error wakelock cleanups  [Francisco Franco]
+69bcb27  net: wireless: remove WARN_ON since it clutter kmsg logs  [Francisco Franco]
+1d141ba  sound: tfa9890: rip more log spam  [Francisco Franco]
+7499c0d  sound: tfa9890: rip spam  [Francisco Franco]
+4aad947  sound: tfa9890: silence log crap  [Francisco Franco]
+29b3f5e  qcom: msm-core: uninterruptible wait - you can kiss my arse goodbye  [franciscofranco]
+fafdd88  drivers: synaptics_s3320: silence more log spam  [Francisco Franco]
+e4d8356  printk: Ignore LOG_USER messages in kmsg  [Francisco Franco]
+b510347  msm: mpm: disable debugging  [franciscofranco]
+409fae7  arm64: irq: remove affinity logging. Makes it hard to use dmesg with this spam  [franciscofranco]
+184908a  selinux: just shut up  [franciscofranco]
+53c9dd1  msm: vidc: disable debug logs  [franciscofranco]
+aff44d2  msm: Use interruptible wait to not affect load average  [franciscofranco]
+61e3763  proc: much faster /proc/vmstat  [Francisco Franco]
+2086199  power: qpnp-fg: queue on power efficient  [xNombre]
+8414075  power: qpnp-fg: prevent double-calling read_beat  [xNombre]
+5a71a75  power: qpnp-fg: make read_beat a static function  [John Dias]
+9581d68  power: qpnp-fg: have sanity check beat once before wakelock  [John Dias]
+7ec6d84  PM / devfreq: Skip status update on uninitialized previous_freq  [Tobias Jakobi]
+0f7d2a6  PM / devfreq: Add proper locking around list_del()  [Axel Lin]
+ab64ee6  power: msm-core: Compile out temperature polling  [Sultanxda]
+dd194a0  power: msm-core: Add missing NULL pointer check in msm_core_ioctl()  [Sultanxda]
+b0effa0  drivers: cpufreq: Use interruptible waits  [Harsh Shandilya]
+3d6d2aa  cpufreq: governor: Name delayed-work as dwork  [Viresh Kumar]
+79c7f09  adreno_tz: Push 27MHz frequency step to be used a bit more  [MOVZX]
+e27477d  dts: Reduce msm-core polling rate to 100ms  [Alex Naidis]
+6cdb00e  DTS: Decrease BCL low battery threshold to 5%  [Alex Naidis]
+da4ec71  arm64: allow custom HZ options  [crian]
+
+====================
+     2018-06-21    
+====================
+
+====================
      2018-06-20    
 ====================
+d2c44bf  build: R.5  [crian]
 17579f7  input: synaptics: s1302: make disable buttons on touch configurable  [Christian S]
 5d07611  defconfig: regenerate  [crian]
 
@@ -89,13 +132,13 @@ c412a34  block: maple: Fix some logic, import former/latter request logic from S
 823e149  block: maple: Clean up and add patchlevel macro to keep track of commits  [Joe Maples]
 2145ea1  block: maple: Remove CONFIG_HZ dependency, assume 300 for interrupt frequency  [Joe Maples]
 dc7026a  block: [Introduded for 3.18.y] Add Maple I/O Scheduler  [Joe Maples]
-cbbc2ba  defconfig: enable fast charge  [crian]
-8903002  drivers: misc: implement usb fast charge mode  [engstk]
-434daef  mdss_fb: adjust backlight dimmer formula  [crian]
 
 ====================
      2018-06-10    
 ====================
+cbbc2ba  defconfig: enable fast charge  [crian]
+8903002  drivers: misc: implement usb fast charge mode  [engstk]
+434daef  mdss_fb: adjust backlight dimmer formula  [crian]
 a316a71  mdss_fb: introduce new backlight dimmer formula  [brigio345]
 7394938  mdss_fb: add backlight dimmer option  [flar2]
 1f44b8e  net: add wireguard  [crian]
@@ -114,59 +157,4 @@ d871f1d  build: add changelog script  [crian]
 6a7917f  PM: devfreq: Fix simple_ondemand crashing on startup  [myfluxi]
 46f9e8a  PM: devfreq: Use high priority workqueue  [myfluxi]
 c0822c3  PM: devfreq: Always reflect a change of polling interval  [myfluxi]
-7e2fa8f  kernel: cpu: use cpu_read_relaxed on cpu_down()  [franciscofranco]
-c846ebd  arm64: atomic: add missing macros  [franciscofranco]
-5d8294b  llist: defining relaxed version of llist_empty  [Sumit Singh]
-8797305  hrtimer: enhance power efficiency  [Sumit Singh]
-1fd23ea  thread_info: enhance power efficiency  [Sumit Singh]
-b4060ed  arm64: processor.h: remove redundant macros  [Sumit Singh]
-38659d1  ARM64: defining macros to optimize power usage  [Sumit Singh]
-4e10968  arm64: asm: relaxed.h: defined relaxed.h  [Sumit Singh]
-71b3c3b  arm: asm: relaxed.h: defined relaxed.h  [Sumit Singh]
-54dda70  asm-generic: processor.h: remove redundant macros  [Sumit Singh]
-c984400  asm-generic: processor.h: adding new header file  [Sumit Singh]
-a3a08cc  asm-generic: relaxed.h: defined relaxed.h  [Sumit Singh]
-31e1803  arm64: atomic.h: defining relaxed atomic_read  [Sumit Singh]
-4b0f9ce  defconfig: enable boeffla_wl_blocker  [crian]
-c2067db  boeffla_wl_blocker: don't block wakelocks by default  [Christian S]
-8beb20b  boeffla_wl_blocker: update to wakelock blocker driver v1.1.0  [andip71]
-74ecaa3  boeffla_wl_blocker: update to wakelock blocker driver v1.0.1  [andip71]
-66cc460  boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0  [andip71]
-
-====================
-     2018-06-08    
-====================
-66cc460  boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0  [andip71]
-e61df21  arm64: crypto: Improve target optimization flags  [Alex Naidis]
-898c531  fs: default to noatime  [arter97]
-12ca9fa  msm: performance: prevent the driver from handling userspace min freq cpu boost hints. We'll use the standard cpu-boost input-boost functionality which gives users freedom to choose their own settings  [franciscofranco]
-3118139  cpufreq: cache tunables for ondemand and conservative governors  [flar2]
-125076d  msm: qpnp-haptic: set up sysfs interface for common cmhw implementation  [dianlujitao]
-220a6c1  qpnp-haptic: Add sysfs interface to control intensity  [Willi Ye]
-dba878a  msm: thermal: Add sysfs nodes to control parameters  [Pranav Vashi]
-5f76e97  msm: thermal: Check temperature only if probed  [myfluxi]
-
-====================
-     2018-06-07    
-====================
-d96a47c  Makefile: optimize  [crian]
-5ce4853  cpufreq: interactive: add screen off max frequency tunable  [imoseyon]
-463bcab  cpufreq: interactive: add powersave bias tunable  [Joe Maples]
-bb9012d  CPUFREQ: prevent setting io_is_busy by ROM. waste of power.  [Dorimanx]
-e56f694  cpufreq: interactive: prevent perfd from messing with the governor params  [Francisco Franco]
-3499e33  interactive: avoid calling usecs_to_jiffies() repeatedly  [Park Ju Hyung]
-494fbad  drivers: cpufreq_interactive: handle error for module load fail  [gaurav jindal]
-4e8d7f3  CHROMIUM: cpufreq: interactive: calculate load before freq change  [franciscofranco]
-697de71  cpufreq: interactive: Remove the jump_to_max hack  [Christopher R. Palmer]
-1e60df1  cpufreq: interactive: fix to come out of hysteresis mode  [Ramakrishna Gottimukkula]
-743597a  cpufreq_interactive: Allow hispeed_freq to work with prediction  [Rohit Gupta]
-da2caad  cpufreq: interactive: remove hispeed_freq init restriction  [Francisco Franco]
-887cb3a  kthread: Backport queuing_blocked()  [Petr Mladek]
-fb2ea22  cpu-boost: Rework scheduling setup  [Alex Naidis]
-732ae74  cpufreq: cpu-boost: don't boost the gold cluster unecessarily  [Francisco Franco]
-3f445b9  cpufreq: cpu-boost: don't boost if input_boost_ms is <= 0  [Francisco Franco]
-0c2aeea  cpufreq: cpu-boost: don't boost over user set max freq  [Francisco Franco]
-5f1d64e  drivers: cpu-boost: optimize policy update loop on input cpufreq boost  [Francisco Franco]
-00484d3  cpufreq: cpu-boost: set interval between consecutive boosts to be at least the duration of the boost instead of a bigger value  [Francisco Franco]
-d7ff0fa  display: add a simple api to query the display state (on/off) at any point in time  [Francisco Franco]
 
