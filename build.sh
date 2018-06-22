@@ -24,7 +24,7 @@ VARIANT="$BASE_VER-$VER"
 
 # Vars
 export LOCALVERSION=-`echo $VARIANT`
-export CROSS_COMPILE=/media/christian/Volume/toolchain/aarch64-linux-ubertc-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=/media/christian/Volume/toolchain/aarch64-linux-gnu-7.3.1/bin/aarch64-linux-gnu-
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=crian
