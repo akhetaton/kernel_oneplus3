@@ -19,12 +19,12 @@ DEFCONFIG="bane_defconfig"
 
 # Kernel Details
 BASE_VER="BaneKernel"
-VER="R.6"
+VER="R.7"
 VARIANT="$BASE_VER-$VER"
 
 # Vars
 export LOCALVERSION=-`echo $VARIANT`
-export CROSS_COMPILE=/media/christian/Volume/toolchain/aarch64-linux-gnu-7.3.1/bin/aarch64-linux-gnu-
+export CROSS_COMPILE=/data/toolchain/aarch64-linux-gnu-7.3.1/bin/aarch64-linux-gnu-
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=crian
@@ -33,8 +33,8 @@ export KBUILD_BUILD_HOST=venom
 # Paths
 KERNEL_DIR=`pwd`
 KBUILD_OUTPUT="${KERNEL_DIR}/out"
-REPACK_DIR="/media/christian/Volume/kernel/AnyKernel2"
-ZIP_MOVE="/media/christian/Volume/kernel/bk-zips/release"
+REPACK_DIR="/data/kernel/AnyKernel2"
+ZIP_MOVE="/data/kernel/bk-zips/release"
 ZIMAGE_DIR="$KBUILD_OUTPUT/arch/arm64/boot"
 
 # Create output directory
