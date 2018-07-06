@@ -1,6 +1,129 @@
 ====================
+     2018-07-06    
+====================
+5ade0a4  Merge branch 'oneplus/QC8996_O_8.0.0_Beta' of https://github.com/android-linux-stable/op3 into oos-8.0-b  [crian]
+
+====================
+     2018-07-05    
+====================
+
+====================
+     2018-07-04    
+====================
+
+====================
+     2018-07-03    
+====================
+7633d6d  Merge 3.18.114 into oneplus/QC8996_O_8.0.0_Beta  [Nathan Chancellor]
+e903eb4  Linux 3.18.114  [Greg Kroah-Hartman]
+394926f  dm thin: handle running out of data space vs concurrent discard  [Mike Snitzer]
+ac85c4f  block: Fix transfer when chunk sectors exceeds max  [Keith Busch]
+c35f570  udf: Detect incorrect directory size  [Jan Kara]
+5893d17  xen: Remove unnecessary BUG_ON from __unbind_from_irq()  [Boris Ostrovsky]
+7568ba6  video: uvesafb: Fix integer overflow in allocation  [Kees Cook]
+626fb93  nfsd: restrict rd_maxcount to svc_max_payload in nfsd_encode_readdir  [Scott Mayhew]
+ea5c468  media: dvb_frontend: fix locking issues at dvb_frontend_get_event()  [Mauro Carvalho Chehab]
+098a472  media: cx231xx: Add support for AverMedia DVD EZMaker 7  [Kai-Heng Feng]
+77edeac  media: v4l2-compat-ioctl32: prevent go past max size  [Mauro Carvalho Chehab]
+8d2e0fa  backlight: tps65217_bl: Fix Device Tree node lookup  [Johan Hovold]
+3b68ebc  backlight: max8925_bl: Fix Device Tree node lookup  [Johan Hovold]
+d39a326  backlight: as3711_bl: Fix Device Tree node lookup  [Johan Hovold]
+b8a6495  UBIFS: Fix potential integer overflow in allocation  [Silvio Cesare]
+5f14b03  scsi: qla2xxx: Fix setting lower transfer speed if GPSC fails  [Himanshu Madhani]
+ed7221a  time: Make sure jiffies_to_msecs() preserves non-zero time periods  [Geert Uytterhoeven]
+92394f1  MIPS: io: Add barrier after register read in inX()  [Huacai Chen]
+85997c3  PCI: pciehp: Clear Presence Detect and Data Link Layer Status Changed on resume  [Mika Westerberg]
+06f0be2  MIPS: BCM47XX: Enable 74K Core ExternalSync for PCIe erratum  [Tokunori Ikegami]
+07caec8  mtd: cfi_cmdset_0002: Avoid walking all chips when unlocking.  [Joakim Tjernlund]
+520516d  mtd: cfi_cmdset_0002: Fix unlocking requests crossing a chip boudary  [Joakim Tjernlund]
+e592114  mtd: cfi_cmdset_0002: fix SEGV unlocking multiple chips  [Joakim Tjernlund]
+ca99cde  mtd: cfi_cmdset_0002: Use right chip in do_ppb_xxlock()  [Joakim Tjernlund]
+a84a8c9  mtd: cfi_cmdset_0002: Change write buffer to check correct value  [Tokunori Ikegami]
+576abfc  ARM: 8764/1: kgdb: fix NUMREGBYTES so that gdb_regs[] is the correct size  [David Rivshin]
+b2bbfbc  powerpc/fadump: Unregister fadump on kexec down path.  [Mahesh Salgaonkar]
+bab0b55  powerpc/ptrace: Fix enforcement of DAWR constraints  [Michael Neuling]
+b62056b  powerpc/ptrace: Fix setting 512B aligned breakpoints with PTRACE_SET_DEBUGREG  [Michael Neuling]
+13cdfec  powerpc/mm/hash: Add missing isync prior to kernel stack SLB switch  [Aneesh Kumar K.V]
+e80011e  fuse: don't keep dead fuse_conn at fuse_fill_super().  [Tetsuo Handa]
+7863da3  fuse: atomic_o_trunc should truncate pagecache  [Miklos Szeredi]
+e6365d1  ipmi:bt: Set the timeout before doing a capabilities check  [Corey Minyard]
+291c3c7  branch-check: fix long->int truncation when profiling branches  [Mikulas Patocka]
+e7e6fc5  mips: ftrace: fix static function graph tracing  [Matthias Schiffer]
+f304c25  ASoC: cirrus: i2s: Fix {TX|RX}LinCtrlData setup  [Alexander Sverdlin]
+6e4b521  ASoC: cirrus: i2s: Fix LRCLK configuration  [Alexander Sverdlin]
+6ab330a  ASoC: dapm: delete dapm_kcontrol_data paths list before freeing it  [Srinivas Kandagatla]
+7dc58b1  usb: do not reset if a low-speed or full-speed device timed out  [Maxim Moseychuk]
+f81354e  signal/xtensa: Consistenly use SIGBUS in do_unaligned_user  [Eric W. Biederman]
+a90c0e9  m68k/mm: Adjust VM area to be unmapped by gap size for __iounmap()  [Michael Schmitz]
+c77dc4a  fs/binfmt_misc.c: do not allow offset overflow  [Thadeu Lima de Souza Cascardo]
+53ae91e  w1: mxc_w1: Enable clock before calling clk_get_rate() on it  [Stefan Potyra]
+ffed4eb  libata: Drop SanDisk SD7UB3Q*G1001 NOLPM quirk  [Hans de Goede]
+22a528e  libata: zpodd: small read overflow in eject_tray()  [Dan Carpenter]
+7f4a2ad  libata: zpodd: make arrays cdb static, reduces object code size  [Colin Ian King]
+4c223b4  ALSA: hda - Handle kzalloc() failure in snd_hda_attach_pcm_stream()  [Bo Chen]
+cd40764  btrfs: scrub: Don't use inode pages for device replace  [Qu Wenruo]
+8295fb0  ext4: fix fencepost error in check for inode count overflow during resize  [Jan Kara]
+f7eb9c2  ext4: update mtime in ext4_punch_hole even if no blocks are released  [Lukas Czerner]
+c4005b7  tcp: do not overshoot window_clamp in tcp_rcv_space_adjust()  [Eric Dumazet]
+173109c  ARM: 8753/1: decompressor: add a missing parameter to the addruart macro  [Łukasz Stelmach]
+78ec064  ARM: davinci: board-dm646x-evm: set VPIF capture card name  [Sekhar Nori]
+680d754  i2c: viperboard: return message count on master_xfer success  [Peter Rosin]
+ee02e10  i2c: pmcmsp: fix error return from master_xfer  [Peter Rosin]
+e80f75f  i2c: pmcmsp: return message count on master_xfer success  [Peter Rosin]
+bcfde08  ARM: keystone: fix platform_domain_notifier array overrun  [Russell King]
+ec18c66  usb: musb: fix remote wakeup racing with suspend  [Daniel Glöckner]
+315b937  agp: uninorth: make two functions static  [Mathieu Malaterre]
+af26bfa  can: dev: increase bus-off message severity  [Jakob Unterwurzacher]
+f88360c  driver core: add __printf verification to __ata_ehi_pushv_desc  [Mathieu Malaterre]
+385963f  drm/omap: fix possible NULL ref issue in tiler_reserve_2d  [Tomi Valkeinen]
+cbbc5cd  mac80211: Adjust SAE authentication timeout  [Ilan Peer]
+a6f9255  kthread, sched/wait: Fix kthread_parkme() wait-loop  [Peter Zijlstra]
+791e025  scsi: vmw-pvscsi: return DID_BUS_BUSY for adapter-initated aborts  [Jim Gill]
+4e98539  hexagon: export csum_partial_copy_nocheck  [Arnd Bergmann]
+5e61306  hexagon: add memset_io() helper  [Arnd Bergmann]
+f4999df  ARM: davinci: board-dm355-evm: fix broken networking  [Sekhar Nori]
+4d74ecf  bpf: fix uninitialized variable in bpf tools  [John Fastabend]
+3332858  x86/cpu/intel: Add missing TLB cpuid values  [jacek.tomaka@poczta.fm]
+575d772  rds: ib: Fix missing call to rds_ib_dev_put in rds_ib_setup_qp  [Dag Moxnes]
+fec89a2  selftests: ftrace: Add a testcase for multiple actions on trigger  [Masami Hiramatsu]
+1585e56  arm64: ptrace: remove addr_limit manipulation  [Mark Rutland]
+66d1331  net: phy: marvell: clear wol event before setting it  [Jingju Hou]
+f22893b  scsi: isci: Fix infinite loop in while loop  [Colin Ian King]
+220bc43  parisc: time: Convert read_persistent_clock() to read_persistent_clock64()  [Baolin Wang]
+5f3b034  drm/msm: Fix possible null dereference on failure of get_pages()  [Ben Hutchings]
+34bce36  scsi: iscsi: respond to netlink with unicast when appropriate  [Chris Leech]
+b224e22  isofs: fix potential memory leak in mount option parsing  [Chengguang Xu]
+a0f8bca  s390/smsgiucv: disable SMSG on module unload  [Martin Schwidefsky]
+5d82607  MIPS: io: Add barrier after register read in readX()  [Sinan Kaya]
+6eb0687  fsnotify: fix ignore mask logic in send_to_group()  [Amir Goldstein]
+cc9473b  af_key: Always verify length of provided sadb_key  [Kevin Easton]
+2ce6f3e  tools build: Fix Makefile(s) to properly invoke tools build  [Jiri Olsa]
+444e094  tools build: No need to make libapi for perf explicitly  [Jiri Olsa]
+
+====================
+     2018-07-02    
+====================
+
+====================
+     2018-07-01    
+====================
+
+====================
+     2018-06-30    
+====================
+
+====================
+     2018-06-29    
+====================
+
+====================
+     2018-06-28    
+====================
+
+====================
      2018-06-27    
 ====================
+655fb5b  build: R.7  [crian]
 bbc30d6  qdsp6v2: dts_eagle: use newer drivers  [Laster K]
 5de2978  sound: wcd9335: Disable g_DebugMode  [joshuous]
 83a512c  Initial AudioWizard bringup  [joshuous]
@@ -23,6 +146,10 @@ cccf796  PM / devfreq: Don't boost 624000.ufshc on wake  [Sultanxda]
 
 ====================
      2018-06-26    
+====================
+
+====================
+     2018-06-25    
 ====================
 f5a4bdd  cpuidle: Don't enable all governors by default  [Jean Delvare]
 0562b74  cpuidle: menu: Fix menu_select() for CPUIDLE_DRIVER_STATE_START == 0  [Rafael J. Wysocki]
@@ -241,50 +368,10 @@ ef64f95  module.c: allow stock modules to load  [crian]
 644d7d0  .gitignore: add out  [crian]
 
 ====================
-     2018-06-25    
-====================
-
-====================
      2018-06-24    
 ====================
 
 ====================
      2018-06-23    
-====================
-
-====================
-     2018-06-22    
-====================
-
-====================
-     2018-06-21    
-====================
-
-====================
-     2018-06-20    
-====================
-
-====================
-     2018-06-19    
-====================
-
-====================
-     2018-06-18    
-====================
-
-====================
-     2018-06-17    
-====================
-
-====================
-     2018-06-16    
-====================
-
-====================
-     2018-06-15    
-====================
-
-====================
-     2018-06-14    
 ====================
 
