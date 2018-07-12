@@ -19,7 +19,7 @@ DEFCONFIG="bane_defconfig"
 
 # Kernel Details
 BASE_VER="BaneKernel"
-VER="R.8"
+VER="R.9"
 VARIANT="$BASE_VER-$VER"
 
 # Vars
