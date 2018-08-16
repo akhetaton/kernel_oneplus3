@@ -215,6 +215,7 @@ ssize_t dvb_ringbuffer_write(struct dvb_ringbuffer *rbuf, const u8 *buf, size_t 
 ssize_t dvb_ringbuffer_write_user(struct dvb_ringbuffer *rbuf,
 					const u8 __user *buf, size_t len)
 {
+  int status;
 	size_t todo = len;
 	size_t split;
 	ssize_t oldpwrite = rbuf->pwrite;
@@ -415,4 +416,3 @@ EXPORT_SYMBOL(dvb_ringbuffer_read_user);
 EXPORT_SYMBOL(dvb_ringbuffer_read);
 EXPORT_SYMBOL(dvb_ringbuffer_write);
 EXPORT_SYMBOL(dvb_ringbuffer_write_user);
-

@@ -378,6 +378,30 @@ AFLAGS_KERNEL	=
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage -fno-tree-loop-im
 CFLAGS_KCOV	= -fsanitize-coverage=trace-pc
 
+# fall back to -march=armv8-a in case the compiler isn't compatible
+# with -mcpu and -mtune
+ARM_ARCH_OPT := -mcpu=cortex-a57 -mtune=cortex-a57
+GEN_OPT_FLAGS := $(call cc-option,$(ARM_ARCH_OPT),-march=armv8-a) \
+ -g0 \
+ -DNDEBUG \
+ -fomit-frame-pointer \
+ -fmodulo-sched \
+ -fmodulo-sched-allow-regmoves \
+ -fivopts \
+ -Wno-maybe-uninitialized \
+ -Wno-incompatible-pointer-types \
+ -Wno-format-security \
+ -Wno-discarded-array-qualifiers \
+ -Wno-memset-transposed-args \
+ -Wno-bool-compare \
+ -Wno-logical-not-parentheses \
+ -Wno-switch-bool \
+ -Wno-array-bounds \
+ -Wno-unused-variable
+
+# flags to fix module loading issues if incompatible general optimizations are used
+MOD_FIX_FLAGS := -fno-tree-loop-vectorize
+
 
 # Use USERINCLUDE when you must reference the UAPI directories only.
 USERINCLUDE    := \
